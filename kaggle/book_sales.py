@@ -1,3 +1,4 @@
+#!/Users/yz/github/myenv/bin/python
 import pandas as pd
 df = pd.read_csv(
     "book_sales.csv",
