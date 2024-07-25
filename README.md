@@ -23,3 +23,18 @@ Normal Q-Q plot:
 
 ![image](https://github.com/user-attachments/assets/b88dbf20-19fb-42d6-8427-5ff8172bd0b1)
 
+
+====================================================================================
+
+training
+plot target vs time dummy
+<img width="1080" alt="image" src="https://github.com/user-attachments/assets/de660870-cd1d-4aff-a810-d94c49b71bed">
+plot target vs lag1
+<img width="1080" alt="image" src="https://github.com/user-attachments/assets/59d93412-2503-4b2a-8519-21babb15cfa4">
+
+linear regression based on formula: target = weight_1 * dummy + weight_2 * lag1 + bias
+
+plot real target and predicted target:
+<img width="1080" alt="image" src="https://github.com/user-attachments/assets/3a536b2b-c742-4b8b-b1f3-a6b31915e743">
+
+
