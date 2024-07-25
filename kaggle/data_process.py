@@ -44,4 +44,33 @@ fig, ax = plt.subplots()
 ax = sns.regplot(x='Lag_1', y='Hardcover', data=df, ci=None, scatter_kws=dict(color='0.25'))
 ax.set_aspect('equal')
 ax.set_title('Lag Plot of Hardcover Sales');
+#plt.show()
+
+#target = weight_1 * feature_1 + weight_2 * feature_2 + bias
+#feature_1 is the time dummy 0,1,2,...
+#feature_2 is the lag_1
+
+# Define features (X) and target (y)
+X = df[['Time', 'Lag_1']][1:]
+y = df['Hardcover'][1:]
+# Initialize the linear regression model
+from sklearn.linear_model import LinearRegression
+model = LinearRegression()
+# Fit the model
+model.fit(X, y)
+# Retrieve the coefficients and bias
+weight_1, weight_2 = model.coef_
+bias = model.intercept_
+print(f"Weight 1: {weight_1}")
+print(f"Weight 2: {weight_2}")
+print(f"Bias: {bias}")
+
+y_pred = model.predict(X)
+plt.figure()
+plt.scatter(X['Time'],y,color='blue',label='true data')
+plt.scatter(X['Time'],y_pred,color='red',label='prediction')
+plt.xlabel('Time dummy')
+plt.ylabel('Hardcover')
+plt.legend()
 plt.show()
+
