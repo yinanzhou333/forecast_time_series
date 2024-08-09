@@ -13,7 +13,6 @@ print(df.head())
 
 import matplotlib.pyplot as plt
 import seaborn as sns
-#plt.style.use("seaborn-whitegrid")
 plt.rc(
     "figure",
     autolayout=True,
@@ -29,7 +28,6 @@ plt.rc(
     titlesize=16,
     titlepad=10,
 )
-#%config InlineBackend.figure_format = 'retina'
 
 fig, ax = plt.subplots()
 ax.plot('Time', 'Hardcover', data=df, color='0.75')
